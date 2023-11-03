@@ -35,3 +35,43 @@ cmd(
         }
     }
 );
+
+cmd({
+
+            pattern: "fb",
+
+            desc: "fb down",
+
+            react: "📘",
+
+            category: "downloader"
+
+        },
+
+        async(Void, citel, text) => {
+
+            if (!text) return
+
+const fbdl = await fetchJson(`https://darkalphaxteam-api.cyclic.app/api/download/facebook?url=${text}&apikey=prabath`)
+
+const videolink = fbdl.result[0].url[0].url
+
+            citel.reply (`*Hello ${citel.pushName} I Am Finding Your Facebook Video*`);
+
+       Void.sendMessage(citel.chat, {
+
+                video: {
+
+                    url: videolink ,
+
+                },
+
+                caption: tlang().footer,
+
+            }, {
+
+                quoted: citel,
+
+            });
+
+ }
