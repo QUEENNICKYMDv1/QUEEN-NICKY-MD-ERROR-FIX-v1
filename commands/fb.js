@@ -38,7 +38,7 @@ cmd(
 
 cmd({
 
-            pattern: "fb",
+            pattern: "fb2",
 
             desc: "fb down",
 
