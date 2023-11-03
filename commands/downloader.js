@@ -115,7 +115,7 @@ cmd({
 
 
 
-            pattern: "tvideo",
+            pattern: "song2",
 
 
 
