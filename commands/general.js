@@ -129,7 +129,7 @@ cmd({
             contextInfo: {
                 externalAdReply: {
                     title: "QUEEN NICKY REPO",
-                    body: "Easy to Use",
+                    body: "CREATED BY DUMIDU",
                     thumbnail: log0,
                     mediaType: 4,
                     mediaUrl: '',
@@ -174,7 +174,7 @@ cmd({
             contextInfo: {
                 externalAdReply: {
                     title: tlang().title,
-                    body: `Bot-Status`,
+                    body: `BOT STATUS CREATED BY DUMIDU`,
                     thumbnail: log0,
                     mediaType: 2,
                     mediaUrl: ``,
@@ -193,7 +193,7 @@ cmd({
 cmd({
     pattern: "theme",
     desc: "To find all themes",
-    category: "general",
+    category: "",
     filename: __filename,
 },
 async(Void, citel,text,{isCreator}) => {
