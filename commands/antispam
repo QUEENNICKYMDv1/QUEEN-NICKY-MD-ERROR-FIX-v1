@@ -1,0 +1,288 @@
+Copyright (C) 2023
+ Licensed under the  GPL-3.0 License;
+ You may not use this file except in compliance with the License.
+ It is supplied in the hope that it may be useful.
+ * @project_name : Dark Nero V9
+ * @description : Dark Nero V9,A Multi-functional whatsapp bot.
+ **/
+
+const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config ,sleep} = require('../lib')
+const { TelegraPh } = require('../lib/scraper')   
+const util = require('util')
+
+        //---------------------------------------------------------------------------
+cmd(
+    {
+      pattern: "antispam",
+      category: "general",
+      react: "🔥",
+      filename: __filename,
+      desc: "is bot alive??"
+    },
+    async (Void, citel, text, isAdmins) => {
+      let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by KALINDU.*`;
+      const mylink = `https://chat.whatsapp.com/K7i6DvdR8u34WCFuASM26a`
+      const alivtxt = `
+QUEEN-NICKY-MD ANTI SPAME 🚀📲
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUEEN-NICKY-MD ANTI SPAME 🚀📲
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUEEN-NICKY-MD ANTI SPAME 🚀📲
+
+©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪᴅᴜ
+  `;
+      let aliveMessage = {
+        image: {
+          url: await botpic()
+        },
+        caption: alivtxt,
+         
+        
+        footer: tlang().footer,
+        headerType: 4,
+    
+        externalAdReply: {
+          showAdAttribution: true
+        }
+      };
+  
+      await Void.sendMessage(citel.chat, aliveMessage, { quoted: citel });
+  
+      await Void.sendMessage(
+        citel.chat,
+        {
+          audio: {
+            url:
+              "https://raw.githubusercontent.com/Kaveeshasithum/Dark-Nero-Bot-MD/main/src/alive.aac"
+          },
+          mimetype: "audio/mp4",
+          ptt: true
+        },
+        { quoted: citel }
+      );
+    }
+  );
