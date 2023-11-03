@@ -191,61 +191,6 @@ cmd({
 
 //---------------------------------------------------------------------------
 cmd({
-        pattern: "conect",
-        alias: ["ct"],
-        desc: "To check bot status",
-        category: "general",
-        filename: __filename,
-    },
-    async(Void, citel) => {
-        const uptime = process.uptime();
-        timestampe = speed();
-        latensie = speed() - timestampe;
-        let ter = `  ┏━━━━━━━━━━━━━┓
-
- 🧚𝗤𝗨𝗘𝗘𝗡 𝗡𝗜𝗖𝗞𝗬 𝗠𝗗 𝗖𝗢𝗡𝗔𝗘𝗖𝗧𝗘𝗗 ✅*
-
-▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
-
-✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: dumidu
-
-✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+94742443114
-
-✷▎🎋⃟🥷 *ᴍʏ ʏᴜᴛᴜʙᴇ ᴄʜᴀɴᴀʟ*:  https://youtube.com/@divertflowers5821
-
-✷▎🎋⃟🥷 _*Please subscribe me...*_
-
- ✷▎🎋⃟🥷 *Qᴜᴇᴇɴ ɴɪᴄᴋʏ ꜱᴜᴘᴏʀᴛ ɢʀᴏᴜᴘ*
-
- https://chat.whatsapp.com/ClnojBuE3NCKtB69NDcRFe 
-
-┗━━━━━━━━━━━━━┛
-`;
-        let buttonMessaged = {
-            image: {
-                url: await botpic(),
-            },
-            caption: ter,
-            footer: tlang().footer,
-            headerType: 4,
-            contextInfo: {
-                externalAdReply: {
-                    body: 'CREATED BY DUMIDU`,
-                    thumbnail: log0,
-                    mediaType: 2,
-                    mediaUrl: ``,
-                    sourceUrl: ``,
-                },
-            },
-        };
-        return await Void.sendMessage(citel.chat, buttonMessaged, {
-            quoted: citel,
-        });
-
-    }
-)
-//---------------------------------------------------------------------------
-cmd({
     pattern: "theme",
     desc: "To find all themes",
     category: "",
