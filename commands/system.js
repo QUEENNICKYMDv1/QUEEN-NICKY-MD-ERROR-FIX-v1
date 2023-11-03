@@ -259,14 +259,20 @@ Void.sendMessage(citel.chat, {
 
 ${alivemessage}
 
-🍧 *Version:-* 0.0.1
-🆙 *Uptime:-* ${runtime(process.uptime())}
-👩‍💻 *Owner:-* ${Config.ownername}
-🎧 *Branch:-* ${Config.BRANCH}
+*┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐌𝐃 𝐕1👨‍💻_]╾❋*
+┣⃞❑⃝🖲️⃟➤ *𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲* 『ᴅᴜᴍɪᴅᴜ』
+┣⃞❑⃝🎭⃟➤ *𝙾𝚆𝙽 𝙽𝙱* 『94742443114』
+┣⃞❑⃝🍁⃟➤ *𝚄𝙿𝚃𝙸𝙼𝙴* ${runtime(process.uptime())}
+┣⃞❑⃝💕⃟➤ *𝙱𝚁𝙰𝙽𝙲* 『${Config.BRANCH}』
+┣⃞❑⃝🎩⃟➤ *𝚅𝙴𝚁𝚂𝙸𝙾𝙽* 0.1
 
-● Type ${prefix}menu for my command list.
+*👨‍💻𝐒𝐔𝐏𝐏𝐎𝐑𝐓𝐄 𝐆𝐑𝐎𝐔𝐏👨‍💻*
+*https://chat.whatsapp.com/ClnojBuE3NCKtB69NDcRFe*
 
-👩‍🎓 Powered by ${Config.ownername}`;
+┣⃞❑💃⃟➤ ● Type ${prefix}menu for my command list.
+
+┃ _ᴘᴏᴡᴇʀᴇᴅ ʙʏ ${Config.ownername}_*
+┗╼═╾╼═╾╼═╾╼═╾╼═╾❋`;
             let aliveMessage = {
                 image: {
                  url:  await botpic(),
