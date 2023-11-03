@@ -251,22 +251,23 @@ Void.sendMessage(citel.chat, {
           }) 
           await Void.sendPresenceUpdate('recording', citel.chat);
           await Void.sendMessage(citel.chat, { audio: {url : 'https://raw.githubusercontent.com/X-Notiya/DarkQueen-Auto-Voice-Sender/main/Hi.mp3',}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, });
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by Dumidu.*`
+            let alivemessage = Config.ALIVE_MESSAGE || '*𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙲𝙺𝚈 𝙼𝙳*`
             const alivtxt = `
-🤗 *Hello, ${citel.pushName},*
 
-🥽 This is  ${tlang().title}.
+*┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐌𝐃 𝐕1👨‍💻_]╾❋*
+┣⃞❑⃝🖲️⃟➤ *𝐜𝐫𝐞𝐚𝐭𝐞𝐝 𝐛𝐲* 『ᴅᴜᴍɪᴅᴜ』
+┣⃞❑⃝🎭⃟➤ *𝙾𝚆𝙽 𝙽𝙱* 『94742443114』
+┣⃞❑⃝🍁⃟➤ *𝚄𝙿𝚃𝙸𝙼𝙴* ${runtime(process.uptime())}
+┣⃞❑⃝💕⃟➤ *𝙱𝚁𝙰𝙽𝙲* 『${Config.BRANCH}』
+┣⃞❑⃝🎩⃟➤ *𝚅𝙴𝚁𝚂𝙸𝙾𝙽* 0.1
 
-${alivemessage}
+*👨‍💻𝐒𝐔𝐏𝐏𝐎𝐑𝐓𝐄 𝐆𝐑𝐎𝐔𝐏👨‍💻*
+*https://chat.whatsapp.com/ClnojBuE3NCKtB69NDcRFe*
 
-🍧 *Version:-* 0.0.1
-🆙 *Uptime:-* ${runtime(process.uptime())}
-👩‍💻 *Owner:-* ${Config.ownername}
-🎧 *Branch:-* ${Config.BRANCH}
+┣⃞❑💃⃟➤ _● Type ${prefix}menu for my command list_
 
-● Type ${prefix}menu for my command list.
-
-👩‍🎓 Powered by ${Config.ownername}`;
+┃_ᴘᴏᴡᴇʀᴇᴅ ʙʏ ${Config.ownername}_*
+┗╼═╾╼═╾╼═╾╼═╾╼═╾❋`;
             let aliveMessage = {
                 image: {
                  url:  await botpic(),
