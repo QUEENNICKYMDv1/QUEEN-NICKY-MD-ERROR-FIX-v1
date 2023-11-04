@@ -23,7 +23,7 @@ let result = await download(text)
             url: icon,
         },
         caption: `
-        \n ✧ *SHENU QUEEN SEARCH APP*
+        \n ✧ *QUEEN NICKY APP DOWNLOADER*
         \n━━━━━━━━━━━━━━━━━━
         
         \n ┇📚 *ᴀᴘᴘ ɴᴀᴍᴇ:* ${getname}
@@ -34,7 +34,7 @@ let result = await download(text)
         
         \n ┇📊 *ꜰɪʟᴇ ꜱɪᴢᴇ:* ${size}
         
-        \n ❭ *ꜱʜᴇɴᴜ Qᴜᴇᴇɴ ᴍᴅ ° ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴄʏʙᴇʀ ᴛʜᴜꜱʜᴀɴ*`,
+        \n ❭ *Qᴜᴇᴇɴ ɴɪᴄᴋʏ ᴍᴅ ° ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ*`,
     })
     return Void.sendMessage(citel.chat, {
         document: {
@@ -42,8 +42,8 @@ let result = await download(text)
         },
         mimetype: "application/vnd.android.package-archive",
         fileName: getname,
-        caption: `🧚 *ꜱʜᴇɴᴜ-𝑄ᴜᴇᴇɴ-ᴍᴅ ᴠ1*
-👩‍💻 *ᴄʀᴇᴛᴇᴅ ʙʏ ᴄʏʙᴇʀ ᴛʜᴜꜱʜᴀɴ*`,
+        caption: `🧚 *𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙲𝙺𝚈 𝙼𝙳*
+👩‍💻 *©ᴄʀᴇᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ*`,
     }, {
         quoted: citel,
     });
