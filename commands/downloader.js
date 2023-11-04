@@ -59,83 +59,43 @@ catch(e){
 console.log(e)
 }})
     //---------------------------------------------------------------------------
-cmd({
-            pattern: "apk",
-            desc: "Downloads apks  .",
-            category: "downloader",
-	    react: "✅",
-            filename: __filename,
-            use: '<add sticker url.>',
-        },
+cmd({ 
+   pattern: 'apk', 
+   desc: 'Download APK', 
+   category: 'downloader', 
+   use:'<does this>', 
+ }, async(Void,citel,text) => { 
+ const args = text; 
+ let search1 = await apks.search(args); 
+ const id1 = search1[0].id ; 
+ const apkname = search1[0].name ; 
+ let apkdata = await apks.download(id1); 
+ const dla = apkdata.dllink; 
+ const icona = apkdata.icon; 
+ const lastup = apkdata.lastup; 
+ const size = apkdata.size;
 
-        async(Suhail, citel, text) => {
-       if (!text) return citel.reply(`*Need Playstore App Name*`)
-try {
-let result = await download(text)
- const applink = result.dllink
-    const getname = result.name
-    const icon = result.icon
-    const lastupdate = result.lastup
-    const packagename = result.package
-    const size = result.size
-      await Suhail.bot.sendMessage(citel.chat, {
-        image: {
-            url: icon,  
-        },
-        caption: `
-        \n👑KING VAJIRA👑 APK DOWNLOADER📥
-        \n⏳ *Playstore Download*
-        
-        \n📲 *App name:* ${getname}
-        
-        \n📩 *Last update:* ${lastupdate}
-        
-        \n🖥️ *Package name:* ${packagename}
-        
-        \n📊 *File size:* ${size}`,
-    })
-    return Suhail.bot.sendMessage(citel.chat, {
-        document: {
-            url: applink,
-        },
-        mimetype: "application/vnd.android.package-archive",
-        fileName: getname,
-    }, {
-        quoted: citel,
-    });
-  } catch (err) {
-    console.error(err);
-    citel.reply(`❌ An error occurred while processing your request. Please try again later.${err}`);
-  }
-	
-	
-	
-	
-	
-	
-	/*
-  if(!text) return citel.reply(`*_Please Give Me App Name_*`);
-let searc = await search(text);
-//console.log(searc);
-let data = await download(searc[0].id);
-//console.log(data);
+ var rep = `* 📱APK Downloader📱*
 
-     let  inf  ="App Name : " +data.name;
-         inf +="\n*App id        :* " +data.package;
-         inf +="\n*App id        :* " +data.lastup;
-         inf +="\n*App Size     :* " +data.size;
-        // inf +="\n*App Link     :* " +data.dllink;
-         
-                        let buttonMessage = {
-                        document: {url : data.dllink},
-                        mimetype: 'application/vnd.android.package-archive',
-                        fileName: data.name+`.apk`,
-                        caption : inf
-                        
-                    }
-                 Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-*/}
-)
+*🔍 Name :* ${apkname}
+
+*📀 Package Name :* ${id1}
+
+*📲 Update On :* ${lastup}
+
+*📊 Size :* ${size}` ;
+
+await Void.sendMessage(citel.chat,{image:{url:icona,}, caption: rep,});
+ return Void.sendMessage(citel.chat,{ 
+     document: { 
+         url: dla, 
+     }, 
+     fileName: apkname+'.apk', 
+     mimetype: "application/vnd.android.package-archive", 
+ }, { 
+     quoted: citel, 
+ }) 
+});
   //---------------------------------------------------------------------------
 cmd({
 
