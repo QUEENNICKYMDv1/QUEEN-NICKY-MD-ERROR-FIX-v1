@@ -75,7 +75,7 @@ cmd({
  const lastup = apkdata.lastup; 
  const size = apkdata.size;
 
- var rep = `* 📱APK Downloader📱*
+ var rep = `* 📱QUEEN NICKY APK DOWNLOADER📱*
 
 *🔍 Name :* ${apkname}
 
