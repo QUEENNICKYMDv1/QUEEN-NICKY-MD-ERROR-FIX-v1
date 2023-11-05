@@ -1,76 +1,32 @@
-const moment = require('moment-timezone') 
- const {fetchJson,cmd, tlang } = require('../lib') 
- let gis = require("async-g-i-s"); 
- const axios = require('axios') 
- const fetch = require('node-fetch') 
- const Esana = require('@sl-code-lords/esana-news') 
- var api = new Esana() 
-  
-     //--------------------------------------------------------------------------- 
-  
-  cmd({   
-       pattern: "nasa",   
-       alias: ["news/nasa"],   
-       react: "🀄",   
-       desc: "",   
-       category: "news",   
-       use: '.hirunews',   
-       filename: __filename   
-   },   
-   async(Void, citel) => {   
-   try{   
-   const nasa = await fetchJson(`https://darkapi--technicalhacke4.repl.co/nasanews`);   
-  
-             const images = `${nasa.result.image}`   
-              const title = `${nasa.result.title}`  
-              const news = `${nasa.result.desc}`   
-  
-   await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `\n*${ title }*\n\n _${news}._\n\n*`}, { quoted: citel })   
-   }   
-   catch(e){   
-   console.log(e)   
-   }}) 
- //--------------------------------------- 
- cmd({  
-      pattern: "technews",  
-      react: "🧾",  
-      desc: "",  
-      category: "news",  
-      use: '.technews',  
-      filename: __filename  
-  },  
-  async(Void, citel) => {  
-  try{  
-  const technews = await fetchJson(`http://darkapi.technicalhacke4.repl.co/sinhala-technews`);  
-  
-  
-  
-  
-             const images = `${technews.result.img}`  
-             const title = `${technews.result.title}`  
-             const news = `${technews.result.decs}`  
-  
-  await Void.sendMessage(citel.chat,  { image: { url: images }, caption: `\n*${ title }*\n\n _${news}._\n\n`}, { quoted: citel })  
-  }  
-  catch(e){  
-  console.log(e)  
-  }}) 
- //------------------------------------- 
-     cmd({ 
-         pattern: "news/esana", 
-         category: "news", 
-         desc: "Searches news", 
-         use: '<text>', 
-         filename: __filename, 
-     }, 
-     async(Void, citel) => { 
-        let res = await api.latest_id(); 
-        const nid = res.results.news_id; 
-        let news = await api.news(nid); 
-        const tt = news.results.TITLE; 
-        const dss = news.results.DESCRIPTION; 
-        const ttime = news.results.PUBLISHED; 
-        const img = news.results.COVER; 
-        const cap = `✦ 𝚃𝚒𝚝𝚕𝚎 :- ${tt} \n \n ◇ ᴅᴇꜱᴄʀᴇᴘᴛɪᴏɴ :- ${dss} \n \n ◈ ᴛɪᴍᴇ :- ${ttime}`; 
-                 await Void.sendMessage(citel.chat,{image:{url: img}, caption: cap})  
- })
+const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib')
+const Esana = require('@sl-code-lords/esana-news');
+var api = new Esana()
+
+cmd({
+    pattern: 'esana',
+    alias: ['esananews','news'],
+    desc: 'whatsapp beta infomation.',
+    category: 'news',
+    react: "📃",
+    use: '<wbi>',
+  },
+        async(Void, citel, text) => {
+
+       try { const latst = await api.latest_id();
+            const nws = latst.results.news_id
+            let nn = text || nws
+            const ress = await api.news(nn);
+            const res = ress.results;
+
+            const txt2 = await Void.sendMessage(citel.chat, {image: {url: res.COVER}, caption: `\n*┣━( _📃QUEEN NICKY ＥＳＥＮＡ📃ＮＥＷＳ📃_ )* \n\n*┃◉* *⇨ ᴛɪᴛᴇʟ :* ${res.TITLE}\n\n*┃◉* *⇨ ᴅᴀᴛᴇ :* ${res.PUBLISHED}\n\n*┃◉* *⇨ ᴜʀʟ :* ${res.URL}\n\n*┃◉* *⇨ Description :* ${res.DESCRIPTION}\n\n*┗━━━━━━━━━━━━━━◆*\n\nQᴜᴇᴇɴ-ɴɪᴄᴋʏ-ᴍᴅ ᴇꜱᴀɴᴀ ɴᴇᴡꜱ 📃\n\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ`}, { quoted: citel });
+
+                await Void.sendMessage(citel.chat, { react: {
+        text: "📰",
+        key: txt2.key,
+            } } );
+
+    } catch (e) {
+    console.log(e)
+    citel.reply("❗ *" + e + "*")
+  }
+})
