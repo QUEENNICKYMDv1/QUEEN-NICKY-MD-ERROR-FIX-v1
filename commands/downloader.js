@@ -1536,68 +1536,86 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "audio",
-            react: "🎧",
-            alias :['song'],
-            desc: "Downloads audio from youtube.",
+            pattern: "video",
+            alias: ["වීඩියෝ","වීඩියො","විඩියො","විඩියෝ"],
+            desc: "Downloads video from yt.",
             category: "downloader",
+            react: "📽️",
             filename: __filename,
-            use: '<text>',
+            use: '<faded-Alan Walker>',
         },
         async(Void, citel, text) => {
-            let yts = require("secktor-pack");
-            let search = await yts(text);
-            let anu = search.videos[0];
-            const getRandom = (ext) => {
-                return `${Math.floor(Math.random() * 10000)}${ext}`;
-            };
-            let infoYt = await ytdl.getInfo(anu.url);
-            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
-            let titleYt = infoYt.videoDetails.title;
-            let randomName = getRandom(".mp3");
-            citel.reply('*┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐌𝐃 𝐕1👨‍💻_]╾❋*\n\n┏━━━━━━━━━━━━━┓\n\n🐹 *Qᴜᴇᴇɴ ɴɪᴄᴋʏ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ* 🐹\n\n▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ*: dumidu\n\n✷▎🎋⃟🥷 *ᴄʀᴇᴀᴛᴇʀ ɴᴜᴍʙᴇʀ*:  wa.me//+94742443114\n\n┗━━━━━━━━━━━━━┛\n\n*✷▎🎋⃟🥷\n\n*𝗧𝗜𝗧𝗟𝗘:* ${anu.title}\n\n✷▎🎋⃟🥷*𝗩𝗢𝗘𝗪𝗦:* ${anu.views}\n\n✷▎🎋⃟🥷*𝗗𝗨𝗥𝗔𝗧𝗜𝗢𝗡:* ${anu.timestamp}\n\n✷▎🎋⃟🥷 *𝗨𝗣𝗟𝗢𝗔𝗗𝗘𝗗:* ${anu.ago}\n\n✷▎🎋⃟🥷 *𝗟𝗜𝗡𝗞* : ${anu.url}\n\n✷▎🎋⃟🥷 *𝗔𝗨𝗧𝗛𝗢𝗥:* ${anu.author.name}\n\n┗━━━━━━━━━━━━━┛')
-            citel.reply (`*Uploading Your song *`);
-            const stream = ytdl(anu.url, {
-                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
+            if (!text) return citel.reply(`*Please Give Me A Video Name OR Youtube Video Url*❗`)
+            let yts = require("secktor-pack")
+            let search = await yts(text)
+            listSerch = []
+
+            teskd = `┏━━━━━━━━━━━━━━━━━━━━━━━━━
+┃  *YOUTUBE VIDEO DOWNLOADER* 
+┗━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+   ● *YOU ENTER THE WORD:*  ${text}
+
+   ● *TOTAL REQUEST:* ${search.all.length}
+
+   ● *BASED WEBSITE:* Youtube
+
+
+
+
+⦿.  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
+
+`
+
+            for (let i of search.all) {
+
+                listSerch.push({
+
+                    title: i.title,
+
+                    rowId: `${prefix}ytmp4 ${i.url}`,
+
+                    description: `*${Config.ownername}* / ${i.timestamp}`
+
                 })
-                .pipe(fs.createWriteStream(`./${randomName}`));
-            await new Promise((resolve, reject) => {
-                stream.on("error", reject);
-                stream.on("finish", resolve);
-            });
 
-            let stats = fs.statSync(`./${randomName}`);
-            let fileSizeInBytes = stats.size;
-            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-            if (fileSizeInMegabytes <= dlsize) {
-                let buttonMessage = {
-                    audio: fs.readFileSync(`./${randomName}`),
-                    mimetype: 'audio/mpeg',
-                    fileName: titleYt + ".mp3",
-                    headerType: 4,
-                    contextInfo: {
-                        externalAdReply: {
-                            title: titleYt,
-                            body: citel.pushName,
-                            renderLargerThumbnail: true,
-                            thumbnailUrl: search.all[0].thumbnail,
-                            mediaUrl: text,
-                            mediaType: 1,
-                            thumbnail: await getBuffer(search.all[0].thumbnail),
-                            sourceUrl: text,
-                        },
-                    },
-                }
-                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-                return fs.unlinkSync(`./${randomName}`);
-            } else {
-                citel.reply(`❌ File size bigger than 100mb.`);
             }
-            fs.unlinkSync(`./${randomName}`);
-            
 
+            const sections = [
+
+                {
+
+                    title: "All request★ 🔎 / Total Search 🔎" + search.all.length,
+
+                    rows: listSerch
+
+                }
+
+            ]
+
+            const listMessage = {
+
+                text: teskd,
+
+                footer: tlang().footer,
+
+                buttonText: "Select Video",
+
+                mentions: await Void.parseMention(teskd),
+
+                sections
+
+            }
+
+            return Void.sendMessage(citel.chat, listMessage, {
+
+                quoted: citel
+
+            })
 
         }
+
     )
     //---------------------------------------------------------------------------
 
