@@ -1552,14 +1552,14 @@ cmd({
             let buttons = [{
                     buttonId: `${prefix}ytmp3 ${anu.url}`,
                     buttonText: {
-                        displayText: "AUDIO",
+                         "AUDIO",
                     },
                     type: 1,
                 },
                   {
                     buttonId: `${prefix}ytdoc ${anu.url}`,
                     buttonText: {
-                        displayText: "DOCUMENT",
+                         "DOCUMENT",
                     },
                     type: 1,
                 },
