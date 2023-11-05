@@ -1536,86 +1536,61 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "video",
-            alias: ["වීඩියෝ","වීඩියො","විඩියො","විඩියෝ"],
-            desc: "Downloads video from yt.",
+            pattern: "song",
+            alias: ["ගීතය","සෝන්ග්","සින්දුව","සිංදුව","play","mp3"],
+            desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
-            react: "📽️",
+            react: "🎵",
             filename: __filename,
-            use: '<faded-Alan Walker>',
+            use: '<faded-Alan walker.>',
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply(`*Please Give Me A Video Name OR Youtube Video Url*❗`)
-            let yts = require("secktor-pack")
-            let search = await yts(text)
-            listSerch = []
+            if (!text) return citel.reply(`*Please Give Me A Song Name*❗ `)
+            let yts = require("secktor-pack");
+            let search = await yts(text);
+            let anu = search.videos[0];
+            let buttons = [{
+                    buttonId: `${prefix}ytmp3 ${anu.url}`,
+                    buttonText: {
+                        displayText: "AUDIO",
+                    },
+                    type: 1,
+                },
+                  {
+                    buttonId: `${prefix}ytdoc ${anu.url}`,
+                    buttonText: {
+                        displayText: "DOCUMENT",
+                    },
+                    type: 1,
+                },
+            ];
+            let buttonMessage = {
+                image: {
+                    url: anu.thumbnail,
+                },
+                caption: `
+╭────────────────❖
+│ ℹ️ *INFORMATION* 
+│
+│☍ ⦁ *Title:* ${anu.title}
+│☍ ⦁ *Duration:* ${anu.timestamp}
+│☍ ⦁ *Viewers:* ${anu.views}
+│☍ ⦁ *Uploaded:* ${anu.ago}
+│☍ ⦁ *Author:* ${anu.author.name}
+╰────────────────❖
+⦿. *URL:* ${anu.url}
 
-            teskd = `┏━━━━━━━━━━━━━━━━━━━━━━━━━
-┃  *YOUTUBE VIDEO DOWNLOADER* 
-┗━━━━━━━━━━━━━━━━━━━━━━━━━
-
-
-   ● *YOU ENTER THE WORD:*  ${text}
-
-   ● *TOTAL REQUEST:* ${search.all.length}
-
-   ● *BASED WEBSITE:* Youtube
-
-
-
-
-⦿.  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
-
-`
-
-            for (let i of search.all) {
-
-                listSerch.push({
-
-                    title: i.title,
-
-                    rowId: `${prefix}ytmp4 ${i.url}`,
-
-                    description: `*${Config.ownername}* / ${i.timestamp}`
-
-                })
-
-            }
-
-            const sections = [
-
-                {
-
-                    title: "All request★ 🔎 / Total Search 🔎" + search.all.length,
-
-                    rows: listSerch
-
-                }
-
-            ]
-
-            const listMessage = {
-
-                text: teskd,
-
+⦿. *REQUEST BY:* ${citel.pushName}
+`,
                 footer: tlang().footer,
-
-                buttonText: "Select Video",
-
-                mentions: await Void.parseMention(teskd),
-
-                sections
-
-            }
-
-            return Void.sendMessage(citel.chat, listMessage, {
-
-                quoted: citel
-
-            })
+                buttons: buttons,
+                headerType: 4,
+            };
+            return Void.sendMessage(citel.chat, buttonMessage, {
+                quoted: citel,
+            });
 
         }
-
     )
     //---------------------------------------------------------------------------
 
