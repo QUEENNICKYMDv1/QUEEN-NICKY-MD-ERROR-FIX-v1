@@ -1382,7 +1382,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ┃🌐 *Duration:* ${anu.timestamp}
 ┃👀 *Viewers:* ${anu.views}
 ┃⬆️ *Uploaded:* ${anu.ago}
-*𝚂𝙷𝙴𝙽𝚄 𝚀𝚄𝙴𝙴𝙽 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
+
+*𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙲𝙺𝚈 𝙼𝙳 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
+ ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
  `,   
 		    }
                  const txt2 = await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
