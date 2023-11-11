@@ -134,7 +134,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
     cmd({
-        pattern: "ujid",
+        pattern: "jid",
         desc: "get jid of all user in a group.",
         category: "owner",
         filename: __filename,
@@ -621,6 +621,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "group",
+	    react: "🔈", 
             desc: "mute and unmute group.",
             category: "group",
             filename: __filename,
@@ -637,11 +638,11 @@ cmd({
 	let Group = await sck.findOne({ id: citel.chat });
             if (text.split(" ")[0] == "close" || text.split(" ")[0] == "mute" ) {
                 await Void.groupSettingUpdate(citel.chat, "announcement")
-                    .then((res) => citel.reply(`Group Chat Muted`))
+                    .then((res) => citel.reply(`𝗚𝗥𝗢𝗨𝗣 𝗖𝗛𝗔𝗧 𝗠𝗨𝗧𝗘𝗗 🔇`))
                     .catch((err) => citel.reply("Error :" +err));
             } else if (text.split(" ")[0] === "open"||text.split(" ")[0] === "unmute") {
                 await Void.groupSettingUpdate(citel.chat, "not_announcement")
-                    .then((res) => citel.reply(`Group Chat Unmuted`))
+                    .then((res) => citel.reply(`𝗚𝗥𝗢𝗨𝗣 𝗖𝗛𝗔𝗧 𝗨𝗡𝗠𝗨𝗧𝗘𝗗 🔊`))
                     .catch((err) => citel.reply("Error : " +err));
             } 
 else if(text=="Detail" || text=="Info" || text=="info" || text=="details" ) 
@@ -737,6 +738,7 @@ cmd({
     //---------------------------------------------------------------------------
 cmd({
             pattern: "add",
+	    react: "🧚",
             desc: "Add that person in group",
             fromMe: true,
             category: "group",
