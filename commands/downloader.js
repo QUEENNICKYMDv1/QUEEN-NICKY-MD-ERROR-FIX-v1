@@ -32,7 +32,7 @@ function __lobz(){const H=['R53FWbciV9','reply','rbot_18407','\x5c(\x20*\x5c)','
     */
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "gitclone",
+            pattern: "gitclone1",
 	    react: "✷▎🎋⃟🥷",
             desc: "Downloads apks  .",
             category: "downloader",
