@@ -1323,9 +1323,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 caption: `
 ╔────────┅───────╗
 
-╠🧚🤹‍♀ ꜱʜᴇɴᴜ Qᴜᴇᴇɴ ʏᴛ ꜱᴇʀᴀᴄʜ 🎧
+╠🧚🤹‍♀ Qᴜᴇᴇɴ ɴɪᴄᴋʏ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴅᴇʀ 🎧
 
-╠🚨 *Youtube Player* ✨
+╠🚨 *QUEEN NICKY VIDEO DOWNLOADER* ✨
  ┉━━━━◭☬◮━━━━━┉
 ╠🎀 *Title:* ${anu.title}
 
