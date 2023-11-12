@@ -17,7 +17,7 @@ cmd(
                     document: { url: wamod.result.com_whatsapp.link },
                     mimetype: "application/vnd.android.package-archive",
                     fileName: wamod.result.com_whatsapp.name,
-                    caption: 'QUEEN-NICKY-MD'
+                    caption: 'QUEEN-NICKY-MD\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ'
                 },
                 { quoted: citel }
             );
@@ -28,7 +28,7 @@ cmd(
                     document: { url: wamod.result.com_fmwhatsapp.link },
                     mimetype: "application/vnd.android.package-archive",
                     fileName: wamod.result.com_fmwhatsapp.name,
-                    caption: 'QUEEN-NICKY-MD'
+                    caption: 'QUEEN-NICKY-MD\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ'
                 },
                 { quoted: citel }
             );
@@ -39,7 +39,7 @@ cmd(
                     document: { url: wamod.result.com_gbwhatsapp.link },
                     mimetype: "application/vnd.android.package-archive",
                     fileName: wamod.result.com_gbwhatsapp.name,
-                    caption: 'QUEEN-NICKY-MD'
+                    caption: 'QUEEN-NICKY-MD\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ'
                 },
                 { quoted: citel }
             );
@@ -50,7 +50,7 @@ cmd(
                     document: { url: wamod.result.com_yowhatsapp.link },
                     mimetype: "application/vnd.android.package-archive",
                     fileName: wamod.result.com_yowhatsapp.name,
-                    caption: 'QUEEN-NICKY-MD'
+                    caption: 'QUEEN-NICKY-MD\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ'
                 },
                 { quoted: citel }
             );
