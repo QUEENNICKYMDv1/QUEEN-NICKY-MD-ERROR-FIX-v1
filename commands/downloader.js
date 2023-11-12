@@ -52,7 +52,65 @@ cmd({
 
 	})
     //---------------------------------------------------------------------------
+cmd({
+            pattern: "song2",
+            alias: ["audio2"],
+            desc: "Downloads audio from youtube.",
+            category: "downloader",
+            filename: __filename,
+            use: '<give text>',
+        },
+        async(Void, citel, text) => {
+  
+                if (!text) return await citel.reply(`*_Give Me Song Name_\n\nEg÷ QUEEN NICKY MD_\nඋදා÷ QUEEN NICKY MD_*`);
+                let yts = require("secktor-pack")
+                let search = await yts(text);
+                let i = search.all[1] ;
+                let cap = "\t *┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐒𝐎𝐍𝐆 𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐄𝐑👨‍💻_]╾❋*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\n1 To Video \n2 To Audio\n\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ" ;
+                Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
+           
+           
+           
+           
+           
+           
+            
+           
+           /*
+    
+    
+            let search = await yts(text)
+            let listSerch = []
+            let teskd = `Result From ${text}.\n_+ ${search.all.length} more results._`
+            for (let i of search.all) {
+                listSerch.push({
+                    title: i.title,
+                    rowId: `${prefix}ytmp3 ${i.url}`,
+                    description: `*QUEEN-NICKY-MD* / ${i.timestamp}`
+                })
+            }
+            const sections = [
 
+                {
+                    title: "Total Search🔍" + search.all.length,
+                    rows: listSerch
+                }
+
+            ]
+            const listMessage = {
+                text: teskd,
+                footer: tlang().footer,
+                title: ``,
+                buttonText: "Songs",
+                mentions: await Void.parseMention(teskd),
+                sections
+            }
+            return Void.sendMessage(citel.chat, listMessage, {
+                quoted: citel
+            })
+            */
+    })
+//---------------------------------------------------------------------------
 cmd({
 
             pattern: "video2",
