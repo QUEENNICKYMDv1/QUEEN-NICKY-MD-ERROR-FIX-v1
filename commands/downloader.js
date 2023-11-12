@@ -53,7 +53,7 @@ cmd({
 	})
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "song2",
+            pattern: "song1",
             alias: ["audio2"],
             desc: "Downloads audio from youtube.",
             category: "downloader",
