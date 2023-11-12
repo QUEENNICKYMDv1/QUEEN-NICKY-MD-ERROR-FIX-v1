@@ -2,7 +2,7 @@ const { cmd, fetchJson } = require('../lib');
 
 cmd(
     {
-        pattern: "wamod", // Change the command pattern to something you prefer
+        pattern: "modapk", // Change the command pattern to something you prefer
         react: "🧩",
         alias :["mode","modapk","modwhatsapp"],
         filename: __filename
