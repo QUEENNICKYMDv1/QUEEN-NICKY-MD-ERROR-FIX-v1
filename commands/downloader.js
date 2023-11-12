@@ -62,11 +62,11 @@ cmd({
         },
         async(Void, citel, text) => {
   
-                if (!text) return await citel.reply(`*_Give Me Song Name_\n\nEg÷ QUEEN NICKY MD_\nඋදා÷ QUEEN NICKY MD_*`);
+                if (!text) return await citel.reply(`*_Give Me Song Name_*\n\nEg÷ QUEEN NICKY MD_\nඋදා÷ QUEEN NICKY MD_`);
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐒𝐎𝐍𝐆 𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐄𝐑👨‍💻_]╾❋*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\n1 To Video \n2 To Audio\n\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ" ;
+                let cap = "\t *┏╼[ _👨‍💻 𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐂𝐊𝐘 𝐒𝐎𝐍𝐆 𝐃𝐎𝐖𝐍𝐋𝐎𝐃𝐄𝐑👨‍💻_]╾❋*   \n\n✷▎🎋⃟🥷 Title : " + i.title + "\n✷▎🎋⃟🥷 Url : " + i.url +"\n✷▎🎋⃟🥷 Description : " + i.timestamp +"\n✷▎🎋⃟🥷 Views : "+i.views +"\n✷▎🎋⃟🥷 Uploaded : " +i.ago +"\n✷▎🎋⃟🥷 Author : "+i.author.name+"\n\n\n✷▎🎋⃟🥷 1 To Video \n✷▎🎋⃟🥷 2 To Audio\n\n©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ" ;
                 Void.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
            
            
