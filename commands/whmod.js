@@ -14,6 +14,19 @@ cmd(
             await Void.sendMessage(
                 citel.chat,
                 {
+                    *┏━[ _🐉QUEEN-NICKY-MD🐉_ ]─❂*\n\n*┣━( _🥏 ғᴏᴜɴᴅᴡᴀ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ⬇️_ )* \n\n*┃⿻* *📦 ᴘᴀᴄᴋᴀɢᴇs :* 
+
+      *❂.* _com_whatsapp_ 
+      *❂.* _com_fmwhatsapp_ 
+      *❂.* _com_gbwhatsapp_ 
+      *❂.* _com_yowhatsapp_\n\n*┗━━━━━━━━━━━━━━◆*\n\nQᴜᴇᴇɴ-ɴɪᴄᴋʏ-ᴍᴅ ⦁\n  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ'
+                },
+                { quoted: citel }
+            );
+
+            await Void.sendMessage(
+                citel.chat,
+                {
                     document: { url: wamod.result.com_whatsapp.link },
                     mimetype: "application/vnd.android.package-archive",
                     fileName: wamod.result.com_whatsapp.name,
