@@ -10,8 +10,8 @@ if (icmd) {
                          await Void.sendPresenceUpdate('recording', citel.chat); 
                          const viourl = 'https://github.com/QUEENNICKYMDv1/QUEEN-NICKY-MD-AUTO-VOIC-SENDER/raw/main/'+body+'.mp3'; 
                          await Void.sendMessage(citel.chat, { audio: {url : viourl,}, mimetype: 'audio/mpeg', ptt: true }, { quoted: citel, }); 
-                  await Void.readMessages([mek.key]) 
-                     } 
+                         await Void.readMessages([mek.key]) 
+                         } 
                      break 
                      default :{ 
   
