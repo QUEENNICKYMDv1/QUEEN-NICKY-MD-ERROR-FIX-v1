@@ -4,7 +4,7 @@ cmd({
            
             desc: "(menu cmdlist).",
 
-            category: "general",
+            category: "downloder",
 
             react: "⚙️️️",
 
