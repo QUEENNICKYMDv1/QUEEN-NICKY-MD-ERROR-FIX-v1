@@ -1,6 +1,6 @@
 cmd({
 
-            pattern: " setting",
+            pattern: "setting",
            
             desc: "(menu cmdlist).",
 
