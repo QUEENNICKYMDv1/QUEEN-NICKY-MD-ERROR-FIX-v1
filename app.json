@@ -1,14 +1,14 @@
 {
-  "name": "QUEEN-NICKY-MD",
-  "description": "A WHATSAPP BOT CREATED BY MR-DUMIDU",
+  "name": "QUEEN-NICKY-MD"
+  "description": "QUEEN NICKY MD CRATED BY MR DUMIDU",
   "logo": "https://telegra.ph/file/9f32a109096a372372eab.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "QUEEN-NICKY-MD", "QUEEN-NICKY-MD","QUEEN-NICKY-MD","theme bot","multi device","baileys","MR DUMIDU"],
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device","baileys","Sam Pandey"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "Name of Bot Owner",
-      "value": "MR DUMIDU"
+      "value": "MR-DUMIDU"
   },
   "ALIVE_MESSAGE": {
     "description": "Alive message for bot",
@@ -36,7 +36,7 @@
     },
    "ANTILINK_VALUES": {
     "description": "Put words for antilink",
-     "value": "chat.whatsapp.com",
+     "value": "chat.whatsapp.com,fb.com,instagram.com",
      "required" :false
     },
      "ANTILINK_ACTION": {
@@ -67,7 +67,7 @@
        "value": "94742443114"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit https://secktorbot.herokuapp.com/session "
+    "description": "Please put your SESSION_ID here,if you don't have visit 💃 "
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
@@ -76,11 +76,11 @@
   },
   "MONGODB_URI": {
     "description": "A secret String for Mongodb Connection.(Required),change for better experience",
-    "value": "mongodb+srv://er0.u1smxsv.mongodb.net/?retryWrites=true&w=majority"
+    "value": "mongodb+srv://m:dumidu@cluster0.u1smxsv.mongodb.net/?retryWrites=true&w=majority"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "QUEEN-NICKY"
+    "description": "Put the theme name you want to use. Avilable themes are QUEEN NICKY.",
+     "value": "QUEEN NICKY"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
@@ -93,7 +93,7 @@
   },
   "PACK_INFO": {
     "description": "Put packname;authorname.",
-     "value": "QUEEN;NICKY",
+     "value": "QUEEN;NICKY MD",
      "required": false 
   },
   "heroku": {
