@@ -1,5 +1,5 @@
-FROM quay.io/sampandey001/secktor
-RUN git clone https://github.com/QUEENNICKYMDv1/QUEEN-NICKY-MD-ERROR-FIX-v1 /root/MR-DUMIDU
+FROM quay.io/MR-DUMIDU/QUEEN-NICKY-MD
+RUN git clone https://github.com/MR-DUMIDU/QUEEN-NICKY-MD /root/MR-DUMIDU
 WORKDIR /root/MR-DUMIDU/
 RUN npm install npm@latest
 RUN npm install
