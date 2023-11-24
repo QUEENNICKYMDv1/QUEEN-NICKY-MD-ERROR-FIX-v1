@@ -79,7 +79,7 @@
     "value": "mongodb://mongo:cCBe2fBeA26f4eEbDbC2gD64226EHFg3@viaduct.proxy.rlwy.net:34483"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
+    "description": "Put the theme name you want to use. Avilable themes are QUEEN-NICKY and many more..",
      "value": "QUEEN-NICKY"
   },
     "WORKTYPE": {
