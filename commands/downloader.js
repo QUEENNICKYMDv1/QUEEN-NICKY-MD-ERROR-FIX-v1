@@ -1596,6 +1596,18 @@ const axios= require('axios');
 var videotime = 36000 // 300 min
 var dlsize = 1000 // 1000mb
 //---------------------------------------------------------------------------
+const { tlang, ringtone, cmd,fetchJson, sleep, botpic, getBuffer, pinterest, prefix, Config } = require('../lib')
+const { mediafire } = require("../lib/mediafire.js");
+const {GDriveDl} = require('../lib/scraper.js')
+const fbInfoVideo = require('fb-info-video'); 
+const googleTTS = require("google-tts-api");
+const ytdl = require('ytdl-secktor')
+const cheerio = require('cheerio')
+const fs  = require('fs-extra');
+const axios= require('axios');
+var videotime = 36000 // 300 min
+var dlsize = 1000 // 1000mb
+
 cmd({
             pattern: "song",
             react: "🎧",
@@ -1623,7 +1635,9 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                },
                 caption: `
 
-🎧 𝗤𝗨𝗘𝗘𝗡 𝗡𝗜𝗖𝗞𝗬 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧
+🎧 𝗞𝗜𝗡𝗚 𝗩𝗔𝗝𝗜𝗥𝗔 𝗔𝗨𝗗𝗜𝗢 🎧
+
+🚨 *Youtube Player* 🌿
  ◨┉━━━━╚◭☬◮╝━━━━━┉◧
 
 ╏🎀 *Title:* ${anu.title}
@@ -1639,15 +1653,15 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏📡 *Url* : ${anu.url}
 
 ◯┉━━┅━━━━━━━━━┅━━━┉◯
-
+*ඔබට අවශය අංකය පහතින් තෝරා මෙයට tag කර එවන්න *
+ ◍┈─┈──┈─◈❁◈─┈─┈─┈─◍
 
 *1.1 ╏ AUDIO* 🎧
 *2.1 ╏ DOCUMENT* 📂
 
 
-◯┉━━┅━━━━━━━━━┅━━━┉◯
-©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ 
 
+*👑 ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ 👑* 
 `,
                 footer: tlang().footer,
                 headerType: 4,
@@ -1679,7 +1693,7 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧 𝗤𝗨𝗘𝗘𝗡 𝗡𝗜𝗖𝗞𝗬 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥🎧'))  return 
+if (!text.includes('🎧 𝗞𝗜𝗡𝗚 𝗩𝗔𝗝𝗜𝗥𝗔 𝗔𝗨𝗗𝗜𝗢 🎧'))  return 
 text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "🎧", key: msg.key } } )			
@@ -1754,7 +1768,7 @@ if(!msg.quoted) return
 if (!msg.quoted.isBaileys ) return 
 if(!msg.quoted.caption) return console.log('ew')
 text = msg.quoted.caption
-if (!text.includes('🎧 𝗤𝗨𝗘𝗘𝗡 𝗡𝗜𝗖𝗞𝗬 𝗦𝗢𝗡𝗚 𝗗𝗢𝗪𝗡𝗟𝗢𝗗𝗘𝗥 🎧'))  return 
+if (!text.includes('🎧 𝗞𝗜𝗡𝗚 𝗩𝗔𝗝𝗜𝗥𝗔 𝗔𝗨𝗗𝗜𝗢 🎧'))  return 
 text = text.split('╏📡 *Url* : ')[1].split('\n')[0]		
 if(!text) return 
 await Void.sendMessage(citel.chat, { react: {  text: "⬇️", key: msg.key } } )			
@@ -1775,6 +1789,43 @@ await Void.sendMessage(citel.chat, { react: {  text: "⬇️", key: msg.key } } 
             //30 MIN
             if (infoYt.videoDetails.lengthSeconds >= videotime) {
                 citel.reply(`❌ I can't download that long video!`);
+                return;
+            }
+            let titleYt = infoYt.videoDetails.title;
+            let randomName = getRandom(".mp3");
+            const stream = ytdl(urlYt, {
+                    filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
+                })
+                .pipe(fs.createWriteStream(`./${randomName}`));
+            await new Promise((resolve, reject) => {
+                stream.on("error", reject);
+                stream.on("finish", resolve);
+            });
+
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let yts = require("secktor-pack");
+                let search = await yts(text);
+                
+             
+             let buttonMessage = {
+                    document: fs.readFileSync(`./${randomName}`),
+                    mimetype: 'audio/mpeg',
+                    fileName: titleYt + ".mp3",
+		    caption: `*ᴋɪɴɢ ᴠᴀᴊɪʀᴀ ᴍᴅ 1.1* 👑`,       
+                    headerType: 4,
+                   
+                }
+             
+             
+                await Void.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+                return fs.unlinkSync(`./${randomName}`);
+		
+		} }catch(e){
+			citel.reply('' + e)
+		}})
                 return;
             }
             let titleYt = infoYt.videoDetails.title;
