@@ -1595,7 +1595,6 @@ const fs  = require('fs-extra');
 const axios= require('axios');
 var videotime = 36000 // 300 min
 var dlsize = 1000 // 1000mb
-//---------------------------------------------------------------------------
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic, getBuffer, pinterest, prefix, Config } = require('../lib')
 const { mediafire } = require("../lib/mediafire.js");
 const {GDriveDl} = require('../lib/scraper.js')
@@ -1607,7 +1606,7 @@ const fs  = require('fs-extra');
 const axios= require('axios');
 var videotime = 36000 // 300 min
 var dlsize = 1000 // 1000mb
-
+//---------------------------------------------------------------------------
 cmd({
             pattern: "song",
             react: "🎧",
