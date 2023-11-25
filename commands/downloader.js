@@ -1639,15 +1639,15 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏📡 *Url* : ${anu.url}
 
 ◯┉━━┅━━━━━━━━━┅━━━┉◯
-*ඔබට අවශය අංකය පහතින් තෝරා මෙයට tag කර එවන්න *
- ◍┈─┈──┈─◈❁◈─┈─┈─┈─◍
+
 
 *1.1 ╏ AUDIO* 🎧
 *2.1 ╏ DOCUMENT* 📂
 
 
+◯┉━━┅━━━━━━━━━┅━━━┉◯
+©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ 
 
-*👑  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ 👑* 
 `,
                 footer: tlang().footer,
                 headerType: 4,
