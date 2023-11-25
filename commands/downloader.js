@@ -1374,10 +1374,10 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 caption: `
 ╔────────┅───────╗
 
-╠🧚🤹‍♀ Qᴜᴇᴇɴ ɴɪᴄᴋʏ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴅᴇʀ 🎧
+*QUEEN NICKY VIDEO DOWNLOADER*
 
-╠🚨 *QUEEN NICKY VIDEO DOWNLOADER* ✨
  ┉━━━━◭☬◮━━━━━┉
+ 
 ╠🎀 *Title:* ${anu.title}
 
 ╠🌐 *Duration:* ${anu.timestamp}
@@ -1390,7 +1390,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 
 ╠📡 *Url* : ${anu.url}
 
-╠☬ 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙲𝙺𝚈 𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙳✅
 ╚────────┅────────╝
  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
 `,
@@ -1614,9 +1613,8 @@ if (text.startsWith("https://youtube.com/shorts/")) {
                 caption: `
 ╔┉───────────────┉✰
 
-╠🧚🤹‍♀ Qᴜᴇᴇɴ ɴɪᴄᴋʏ ꜱᴏɴɢ ᴅᴏᴡɴʟᴏᴅᴇʀ 🎧
+ *QUEEN NICKY SONG DOWNLOADER* 
 
-🚨 *SONG DOWNLOADER* 🌿
  ◨┉━━━━╚◭☬◮╝━━━━━┉◧
 
 ╏🎀 *Title:* ${anu.title}
@@ -1630,8 +1628,6 @@ if (text.startsWith("https://youtube.com/shorts/")) {
 ╏👽 *Author:* ${anu.author.name}
 
 ╏📡 *Url* : ${anu.url}
-
-*𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙲𝙺𝚈 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅*
 
 ╚┉────────────────┉
  ©ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴍʀ ᴅᴜᴍɪᴅᴜ
