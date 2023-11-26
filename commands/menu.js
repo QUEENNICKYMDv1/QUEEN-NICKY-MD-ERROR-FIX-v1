@@ -68,7 +68,7 @@ cmd({
         }
     )
 cmd({
-            pattern: "1",
+            pattern: ".1",
             react: "✅",
             category: "general",
             filename: __filename,
@@ -127,7 +127,7 @@ cmd({
         }
     )
 cmd({
-            pattern: "2",
+            pattern: ".2",
             react: "✅",
             category: "general",
             filename: __filename,
