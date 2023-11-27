@@ -1,7 +1,7 @@
 {
-               "name": "Shenu-Queen-Md",
+               "name": "Queen-Nicky-Md",
                "version": "4.0",
-               "description": "Multi device whatsapp bot by Thushan.",
+               "description": "Multi device whatsapp bot by Mr Dumidu.",
                "main": "lib/client.js",
                "type": "commonjs",
                "license": "GPL-3.0",
