@@ -45,7 +45,7 @@ cmd({
 
                 caption: `
 
-*⦁──👑𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝘾𝙆𝙔 𝙎𝙀𝙏𝙏𝙄𝙉𝙂 𝙇𝙄𝙎𝙏👑──⦁*
+*⦁──💃𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝘾𝙆𝙔 𝙎𝙀𝙏𝙏𝙄𝙉𝙂 𝙇𝙄𝙎𝙏💃──⦁*
 
 1♻️➣ To put Antilink type :
 Eg:- .set ANTILINK:false
