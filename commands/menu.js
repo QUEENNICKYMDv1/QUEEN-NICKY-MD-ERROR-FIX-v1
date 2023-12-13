@@ -1,16 +1,15 @@
 const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config } = require('../lib')
 
 cmd({
-            pattern: "menu",
-            react: "📃",
-            category: "menu1",
-            filename: __filename,
-            desc: "is bot alive??"
-        },
-        async(Void, citel, text, isAdmins) => {
-            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by Dumidu.*`
-            const alivtxt = `
-┏⃞❑✷▎🎋⃟🥷➥.31 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
+        pattern: "menu",
+        alias: ["DUMIDU", "dumidu", "MENU"],
+        desc: "Sends info about menu.",
+        category: "general",
+        filename: __filename,
+    },
+    async(Void, citel) => {
+        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
+        let cap = `┏⃞❑✷▎🎋⃟🥷➥.31 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
 ┃
 ┣⃞❑✷▎🎋⃟🥷➥.32 *ɢᴇɴᴇʀᴀʟ ᴍᴇɴᴜ*
 ┃
@@ -51,22 +50,29 @@ cmd({
 ┗⃞❑✷▎🎋⃟🥷➥.50 *ᴇʜɪ ᴍᴇɴᴜ*
 ❍═════════════════════❍
 🧙‍♂️  *_Qᴜᴇᴇɴ ɴɪᴄᴋʏ ᴍᴅ_*
-👩‍💻   *_ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪᴅᴜ_*
-`;
-            let aliveMessage = {
-                image: {
-                    url: await botpic(),
+👩‍💻   *_ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪᴅᴜ_*`
+        let buttonMessaged = {
+            image: { url: await botpic() },
+            caption: cap,
+            footer: tlang().footer,
+            headerType: 4,
+            contextInfo: {
+                externalAdReply: {
+                    title: "QUEEN NICKY MD",
+                    body: "CREATED BY DUMIDU",
+                    thumbnail: log0,
+                    mediaType: 4,
+                    mediaUrl: '',
+                    sourceUrl: ``,
                 },
-                caption: alivtxt,
-                footer: tlang().footer,
-                headerType: 4,
-            };
-             return Void.sendMessage(citel.chat, aliveMessage, {
-                quoted: citel,
-            });
+            },
+        };
+        return await Void.sendMessage(citel.chat, buttonMessaged, {
+            quoted: citel,
+        });
 
-        }
-    )
+    }
+)
 cmd({
             pattern: "31",
             react: "✅",
