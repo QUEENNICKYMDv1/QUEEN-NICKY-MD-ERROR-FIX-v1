@@ -9,70 +9,73 @@ cmd({
     },
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `┏⃞❑✷▎🎋⃟🥷➥.31 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
+        let cap = `cmd({
+            pattern: "menu",
+            react: "📃",
+            category: "menu1",
+            filename: __filename,
+            desc: "is bot alive??"
+        },
+        async(Void, citel, text, isAdmins) => {
+            let alivemessage = Config.ALIVE_MESSAGE || `*A bot developed by Dumidu.*`
+            const alivtxt = `
+┏⃞❑✷▎🎋⃟🥷➥.1 *ᴅᴏᴡɴʟᴏᴅᴇʀ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.32 *ɢᴇɴᴇʀᴀʟ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.2 *ɢᴇɴᴇʀᴀʟ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.33 *ɢʀᴏᴜᴘ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.3 *ɢʀᴏᴜᴘ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.34 *ᴛᴇxᴛᴘʀᴏ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.4 *ᴛᴇxᴛᴘʀᴏ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.35 *ᴄᴏɴᴠᴇʀᴛᴇʀ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.5 *ᴄᴏɴᴠᴇʀᴛᴇʀ ᴍᴇɴᴜ*
 ┃
-┣⃞⃟❑✷▎🎋⃟🥷➥.36 *ᴏᴡɴᴇʀ ᴍᴇɴᴜ*
+┣⃞⃟❑✷▎🎋⃟🥷➥.6 *ᴏᴡɴᴇʀ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.37 *ɴᴇᴡꜱ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.7 *ɴᴇᴡꜱ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.38 *ɢᴀᴍᴇ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.8 *ɢᴀᴍᴇ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.39 *ᴀᴜᴅɪᴏ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.9 *ᴀᴜᴅɪᴏ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.40 *ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.10 *ꜱᴛɪᴄᴋᴇʀ ᴍᴇɴᴜ*
 ┃
-┣⃞❑⃟✷▎🎋⃟🥷➥.41 *ᴀɪ ᴍᴇɴᴜ*
+┣⃞❑⃟✷▎🎋⃟🥷➥.11 *ᴀɪ ᴍᴇɴᴜ*
 ┃
-┣⃞⃟❑✷▎🎋⃟🥷➥.42 *ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ*
+┣⃞⃟❑✷▎🎋⃟🥷➥.12 *ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.43 *ɴꜱꜰᴡ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.13 *ɴꜱꜰᴡ ᴍᴇɴᴜ*
 ┃
-┣❑ ⃟✷🎋⃟🥷➥.44 *ʀᴇᴀᴄᴛɪᴏɴ ᴍᴇɴᴜ*
+┣❑ ⃟✷🎋⃟🥷➥.14 *ʀᴇᴀᴄᴛɪᴏɴ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.45 *ᴍᴏᴅᴇʀᴀᴛɪᴏɴ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.15 *ᴍᴏᴅᴇʀᴀᴛɪᴏɴ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.46 *ɢᴇɴ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.16 *ɢᴇɴ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.47 *ᴡᴇᴇʙ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.17 *ᴡᴇᴇʙ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.48 *ᴍɪꜱᴄ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.18 *ᴍɪꜱᴄ ᴍᴇɴᴜ*
 ┃
-┣⃞❑✷▎🎋⃟🥷➥.49 *ᴇᴄᴏɴᴏᴍʏ ᴍᴇɴᴜ*
+┣⃞❑✷▎🎋⃟🥷➥.19 *ᴇᴄᴏɴᴏᴍʏ ᴍᴇɴᴜ*
 ┃
-┗⃞❑✷▎🎋⃟🥷➥.50 *ᴇʜɪ ᴍᴇɴᴜ*
+┗⃞❑✷▎🎋⃟🥷➥.20 *ᴇʜɪ ᴍᴇɴᴜ*
 ❍═════════════════════❍
 🧙‍♂️  *_Qᴜᴇᴇɴ ɴɪᴄᴋʏ ᴍᴅ_*
-👩‍💻   *_ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪᴅᴜ_*`
-        let buttonMessaged = {
-            image: { url: await botpic() },
-            caption: cap,
-            footer: tlang().footer,
-            headerType: 4,
-            contextInfo: {
-                externalAdReply: {
-                    title: "QUEEN NICKY MD",
-                    body: "CREATED BY DUMIDU",
-                    thumbnail: log0,
-                    mediaType: 4,
-                    mediaUrl: '',
-                    sourceUrl: ``,
+👩‍💻   *_ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴅᴜᴍɪᴅᴜ_*
+`;
+            let aliveMessage = {
+                image: {
+                    url: await botpic(),
                 },
-            },
-        };
-        return await Void.sendMessage(citel.chat, buttonMessaged, {
-            quoted: citel,
-        });
+                caption: alivtxt,
+                footer: tlang().footer,
+                headerType: 4,
+            };
+             return Void.sendMessage(citel.chat, aliveMessage, {
+                quoted: citel,
+            });
 
-    }
-)
+        }
+    )
 cmd({
             pattern: "31",
             react: "✅",
