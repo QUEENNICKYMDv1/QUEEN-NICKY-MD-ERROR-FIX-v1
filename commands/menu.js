@@ -1,15 +1,6 @@
 const { addnote,cmd, sck1, delnote, allnotes, delallnote, tlang, botpic, runtime, prefix, Config } = require('../lib')
 
 cmd({
-        pattern: "menu",
-        alias: ["DUMIDU", "dumidu", "MENU"],
-        desc: "Sends info about menu.",
-        category: "general",
-        filename: __filename,
-    },
-    async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `cmd({
             pattern: "menu",
             react: "📃",
             category: "menu1",
