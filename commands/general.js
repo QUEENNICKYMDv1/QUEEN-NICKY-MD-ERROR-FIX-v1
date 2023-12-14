@@ -118,7 +118,7 @@ cmd({
         let cap = `ᴡᴇʟᴄᴏᴍᴇ ${citel.pushName}\n
 *⭐ Total Stars:* ${data.stargazers_count} stars
 *🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* ᴄᴏᴏᴍɪɴɢ ꜱᴏᴏɴ...
+*🍁 Repo:* https://github.com/QUEENNICKYMDv1/QUEEN-NICKY-MD-ERROR-FIX-v1
 *♾Group:* https://chat.whatsapp.com/E8F5pT0vqVbJjYEYcmQnBr
 *👩‍💻Conect owner number Dumidu :*-94742443114`
         let buttonMessaged = {
@@ -160,7 +160,7 @@ cmd({
 *🌟Description:* A WhatsApp bot with rich features, QUEEN NICKY MD BOT CREATER DUMIDU 
 *⚡Speed:* ${latensie.toFixed(4)} ms
 *🚦Uptime:* ${runtime(process.uptime())}
-*🕸Version:* 0.0.1
+*🕸Version:* 1.0
 *👤Owner:*  ${Config.ownername}
 *Powered by ${tlang().title}*
 `;
@@ -191,7 +191,7 @@ cmd({
 
 //---------------------------------------------------------------------------
 cmd({
-    pattern: "theme",
+    pattern: "tමe",
     desc: "To find all themes",
     category: "",
     filename: __filename,
