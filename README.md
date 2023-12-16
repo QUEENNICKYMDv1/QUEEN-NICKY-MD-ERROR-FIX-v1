@@ -39,7 +39,7 @@ QUEEN NICKY MD CREATE BY MR-DUMIDU
 
 
 
- <a href="https://github.com/QUEEN-NICKY-MD-V1/QUEEN-NICKY-MD/fork" target="blank"><img align="center" src="https://i.imgur.com/cxaSEWe.png" alt="FROK QUEEN-NICKY-MD" height="65" width="170" /></a>
+ <a href="https://github.com/QUEENNICKYMDv1/QUEEN-NICKY-MD-ERROR-FIX-v1/fork" target="blank"><img align="center" src="https://i.imgur.com/cxaSEWe.png" alt="FROK QUEEN-NICKY-MD" height="65" width="170" /></a>
 
 
 
