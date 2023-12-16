@@ -1,5 +1,48 @@
 # QUEEN-NICKY-MD
 
+  <p align="center">  
+  <a href="(https://telegra.ph/file/0a2f87c8fd80076d765e3.jpg)">
+    <img alt="QUEEN-NICKY-MD" height="300" src="https://telegra.ph/file/0a2f87c8fd80076d765e3.jpg">
+    
+  
+  </a>
+</p>  
+
+
+QUEEN NICKY MD CREATE BY MR-DUMIDU
+
+
+
+
+
+
+![repo views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FQUEEN-NICKY-MD-V1%2FQUEEN-NICKY-MD&count_bg=%2379C83D&title_bg=%23555555&icon=gitpod.svg&icon_color=%23E7E7E7&title=Views&edge_flat=false)
+
+![forks](https://img.shields.io/github/forks/QUEEN-NICKY-MD-V1/QUEEN-NICKY-MD?label=Forks&style=social)
+
+
+
+
+
+ ## 𝙌𝙐𝙀𝙀𝙉 𝙉𝙄𝘾𝙆𝙔 𝙈𝘿 𝘿𝙀𝙋𝙇𝙊𝙔 𝙈𝙀𝙏𝙊𝘿𝙎
+.
+.
+.
+
+ 
+
+.
+.
+.
+## *`FORK ON REPO FRST`*
+
+
+
+
+ <a href="https://github.com/QUEEN-NICKY-MD-V1/QUEEN-NICKY-MD/fork" target="blank"><img align="center" src="https://i.imgur.com/cxaSEWe.png" alt="FROK QUEEN-NICKY-MD" height="65" width="170" /></a>
+
+
+
 
  
  ## *`SCAN ON QR`*
